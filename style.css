@@ -1,0 +1,63 @@
+*{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+}
+
+.container {
+          width: 100%;
+          height: 100vh;
+          background-color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+}
+
+.bubble-box {
+          
+          position: relative;
+}
+
+.tea-cup {
+          width: 300px;
+          position: absolute;
+          left: -100px;
+          bottom: -200px;
+
+}
+
+.bubble {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          background-color: white;
+          animation: bubble-fade 5s infinite;
+          position: absolute;
+          filter: blur(6px);         
+}
+.bubble:nth-child(2) {
+          left: 50px;
+          animation-delay: 0.2;
+}
+
+.bubble:nth-child(3) {
+          bottom: -60px;
+          right: -50px;
+          animation-delay: o.1;
+}
+.bubble:nth-child(4) {
+          bottom: -70px;
+          right: -70px;
+          animation-delay: 0.3;
+}
+
+@keyframes bubble-fade {
+
+          0% {
+                    transform: scale(0.2) translateY(0); 
+          }
+          100% {
+                    background-color: transparent;
+                    transform: scale(2) translateY(-150px);
+          }
+}
